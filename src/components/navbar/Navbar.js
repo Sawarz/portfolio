@@ -1,7 +1,10 @@
-import React from 'react'
+import { React, useState } from 'react'
 import styles from './styles.module.css'
+import { ReactComponent as LogoLinkedIn } from '../../assets/media-logos/logo-linkedin.svg'
 
 export default function Navbar() {
+    const [svgsFill, setSvgsFill] = useState("white");
+
     let linksNames = [
         "<dev>",
         "<projects>",
@@ -10,6 +13,16 @@ export default function Navbar() {
     ]
   return (
       <div className={styles.navbar}>
+          <div className={styles.media}>
+              <a href="https://www.linkedin.com/in/tomasz-sawarzy%C5%84ski-890a80241/">
+                <LogoLinkedIn className={styles.logo} fill={svgsFill} onMouseEnter={() => { 
+                    setSvgsFill("aqua");
+                }}
+                onMouseLeave={() => { 
+                    setSvgsFill("white");
+                }}/>
+              </a>
+          </div>
           {linksNames.map((name) => {
               return <a className={styles.link}>{name}</a>
           })}

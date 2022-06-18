@@ -1,9 +1,11 @@
 import { React, useState } from 'react'
 import styles from './styles.module.css'
 import { ReactComponent as LogoLinkedIn } from '../../assets/media-logos/logo-linkedin.svg'
+import { ReactComponent as LogoGithub } from '../../assets/media-logos/logo-github.svg'
 
 export default function Navbar() {
-    const [svgsFill, setSvgsFill] = useState("white");
+    const [linkedInFill, setLinkedFill] = useState("white");
+    const [githubFill, setGithubFill] = useState("white");
 
     let linksNames = [
         "<dev>",
@@ -13,16 +15,22 @@ export default function Navbar() {
     ]
   return (
       <div className={styles.navbar}>
-          <div className={styles.media}>
-              <a href="www.linkedin.com/in/tomasz-sawarzyński-890a80241">
-                <LogoLinkedIn className={styles.logo} fill={svgsFill} onMouseEnter={() => { 
-                    setSvgsFill("aqua");
+              <a href="https://www.linkedin.com/in/tomasz-sawarzyński-890a80241">
+                <LogoLinkedIn className={styles.logo} fill={linkedInFill} onMouseEnter={() => { 
+                    setLinkedFill("rgb(160, 78, 255)");
                 }}
                 onMouseLeave={() => { 
-                    setSvgsFill("white");
+                    setLinkedFill("white");
+                      }} />
+              </a>
+              <a href="https://github.com/Sawarz">
+                <LogoGithub className={styles.logo} fill={githubFill} onMouseEnter={() => { 
+                    setGithubFill("rgb(160, 78, 255)");
+                }}
+                onMouseLeave={() => { 
+                    setGithubFill("white");
                 }}/>
               </a>
-          </div>
           {linksNames.map((name) => {
               return <a className={styles.link}>{name}</a>
           })}

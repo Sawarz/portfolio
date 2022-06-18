@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
       <div className={styles.navbar}>
           <div className={styles.media}>
-              <a href="https://www.linkedin.com/in/tomasz-sawarzy%C5%84ski-890a80241/">
+              <a href="www.linkedin.com/in/tomasz-sawarzyński-890a80241">
                 <LogoLinkedIn className={styles.logo} fill={svgsFill} onMouseEnter={() => { 
                     setSvgsFill("aqua");
                 }}

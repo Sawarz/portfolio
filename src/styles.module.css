@@ -1,0 +1,11 @@
+.currentRoute{
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    font-size: 2rem;
+    color: rgb(160, 78, 255);
+}
+
+.contentWrapper{
+    padding: 10vh 15vw 0 15vw;
+}

@@ -1,0 +1,63 @@
+.roadmapLine{
+    position: absolute;
+    top: 40vh;
+    left:20vw;
+    width: 1px;
+    background-color: rgb(160, 78, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 90vh;
+    margin-bottom: 20vh;
+}
+
+.roadmapPoint{
+    position: relative;
+    top: -10px;
+    left: -7px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(160, 78, 255);
+}
+
+.roadmapText{
+    font-size: 3rem;
+}
+
+.roadmapContent{
+    position: absolute;
+    top: -2rem;
+    left: 50px;
+    width: 40vw;
+    font-size: 3rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.animatedContent{
+    font-size: 5rem;
+}
+
+.animatedContentText{
+    font-size: 2rem;
+}
+
+.roadmapEnd{
+    text-decoration: none;
+}
+
+.confettiSource{
+    position: absolute;
+    top: -3rem;
+    left: 15px;
+    height: 10px;
+    width: 90vw;
+    background-color: rgb(0, 0, 0);
+}
+
+.confetti{
+    position: absolute;
+    top: -2.9rem;
+    left: 15px;
+}

@@ -1,0 +1,105 @@
+.projectsPage{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.projects{
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+}
+
+.project{
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.projectInfo{
+    width: 30%;
+    background-color: white;
+    align-self: stretch;
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 1);
+}
+
+.projectInfo > *{
+    padding: 15px;
+    color: black;
+    font-weight: 600;
+}
+
+.divider{
+    padding: 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+
+.projectTitle{
+    display: flex;
+    flex-direction: row;
+}
+
+.projectTitle > *{
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.projectSubtitle{
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.learnedList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.learnedList *{
+    color: black;
+}
+
+.learnedItem{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.learnedIcon{
+    height: 30px;
+    width: 50px;
+}
+
+
+.photo{
+    height: 80%;
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 1);
+}
+
+.link{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.linkIcon{
+    max-height: 30px;
+    max-width: 30px;
+}

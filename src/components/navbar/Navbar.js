@@ -2,6 +2,7 @@ import { React, useState } from 'react'
 import styles from './styles.module.css'
 import { ReactComponent as LogoLinkedIn } from '../../assets/media-logos/logo-linkedin.svg'
 import { ReactComponent as LogoGithub } from '../../assets/media-logos/logo-github.svg'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     const [linkedInFill, setLinkedFill] = useState("white");
@@ -10,7 +11,6 @@ export default function Navbar() {
     let linksNames = [
         "<dev>",
         "<projects>",
-        "<about>",
         "<contact>"
     ]
   return (
@@ -32,7 +32,8 @@ export default function Navbar() {
                 }}/>
               </a>
           {linksNames.map((name) => {
-              return <a className={styles.link}>{name}</a>
+              let destination = name.replace(/[<>]/g, "");
+              return <Link to={`/${destination}`} className={styles.link}>{name}</Link>
           })}
       </div>
   )

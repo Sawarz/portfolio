@@ -20,10 +20,6 @@
     background-color: rgb(160, 78, 255);
 }
 
-.roadmapText{
-    font-size: 3rem;
-}
-
 .roadmapContent{
     position: absolute;
     top: -2rem;
@@ -33,6 +29,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.roadmapMobile{
+    font-size: 2rem;
 }
 
 .animatedContent{

@@ -5,6 +5,8 @@ import Navbar from './components/navbar/Navbar';
 import Roadmap from './components/roadmap/Roadmap'
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
+import MobileNavbar from './components/navbar/MobileNavbar';
+import { useMediaQuery } from 'react-responsive'
 
 function App() {
   const [currentRoute, setCurrentRoute] = useState("<dev>");
@@ -15,11 +17,12 @@ function App() {
     if(location.pathname != '/')
     setCurrentRoute(`<${location.pathname.replace("/", "")}>`)
   }, [location])
-  
+
+  const isMobile = useMediaQuery({ maxWidth: 767 })
 
   return (
     <div className="App">
-      <Navbar></Navbar>
+      {isMobile ? <MobileNavbar/> : <Navbar/>}
       <div className={styles.contentWrapper}>
         <Routes>
           <Route path="/" element={<Roadmap></Roadmap>}></Route>

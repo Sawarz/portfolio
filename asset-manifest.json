@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b1d40e0e.css",
-    "main.js": "/portfolio/static/js/main.a0e11483.js",
+    "main.css": "/portfolio/static/css/main.4d0261cb.css",
+    "main.js": "/portfolio/static/js/main.537666c3.js",
     "static/media/bee-planner.png": "/portfolio/static/media/bee-planner.08b70c2ba453f11bca06.png",
     "static/media/reactrouter.svg": "/portfolio/static/media/reactrouter.c6b4f5f181157d8c5bdd6d741abecfed.svg",
     "static/media/logo-github.svg": "/portfolio/static/media/logo-github.080591513b1a3eb8fdfe0257830eaff1.svg",
@@ -10,11 +10,11 @@
     "static/media/link.svg": "/portfolio/static/media/link.48c6bccc6500d65bf44d1e4827a11f3c.svg",
     "static/media/firebase.svg": "/portfolio/static/media/firebase.82a35fc0b90d124a8e7333989f767fd3.svg",
     "static/media/react.svg": "/portfolio/static/media/react.fff4fd514ba20a042d2cd63734178e6a.svg",
-    "main.b1d40e0e.css.map": "/portfolio/static/css/main.b1d40e0e.css.map",
-    "main.a0e11483.js.map": "/portfolio/static/js/main.a0e11483.js.map"
+    "main.4d0261cb.css.map": "/portfolio/static/css/main.4d0261cb.css.map",
+    "main.537666c3.js.map": "/portfolio/static/js/main.537666c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1d40e0e.css",
-    "static/js/main.a0e11483.js"
+    "static/css/main.4d0261cb.css",
+    "static/js/main.537666c3.js"
   ]
 }

@@ -5,9 +5,13 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Confetti from 'react-confetti';
 import { useMediaQuery } from 'react-responsive'
+import { useWindowSize } from 'react-use';
 
 
 export default function Roadmap() {
+  const { width, height } = useWindowSize();
+  const confettiWidth = width * 0.75;
+
   function AnimatedText(props) {
     const [ref, inView] = useInView();
     const control = useAnimation();
@@ -118,7 +122,7 @@ export default function Roadmap() {
         </div>
         <div className={styles.roadmapPoint}>
         <div className={styles.confettiSource}></div>
-        <AnimatedContent className={styles.confetti}><Confetti></Confetti></AnimatedContent>
+        <AnimatedContent className={styles.confetti}><Confetti width={confettiWidth}></Confetti></AnimatedContent>
           <div className={roadmapContentStyles}>
             <AnimatedText>Recent times...</AnimatedText>
             <AnimatedContent className={styles.animatedContent}>🏅</AnimatedContent>

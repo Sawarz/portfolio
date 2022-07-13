@@ -18,7 +18,7 @@ function App() {
     setCurrentRoute(`<${location.pathname.replace("/", "")}>`)
   }, [location])
 
-  const isMobile = useMediaQuery({ maxWidth: 767 })
+  const isMobile = useMediaQuery({ maxWidth: 800 })
 
   return (
     <div className="App">
@@ -31,7 +31,7 @@ function App() {
             <Route path="/contact" element={<Contact></Contact>}></Route>
         </Routes>
       </div>
-      <div className={styles.currentRoute}>{currentRoute}<div/>
+      <div className={isMobile ? styles.mobileCurrentRoute : styles.currentRoute}>{currentRoute}<div/>
       </div>
     </div>
   );

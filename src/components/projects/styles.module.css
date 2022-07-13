@@ -14,18 +14,27 @@
     flex-direction: column;
 }
 
-.project{
+.project, .mobileProject{
+    display: flex;
     max-width: 100%;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    min-height: 50vh;
     padding: 20px;
     display: flex;
+}
+
+.project{
     flex-direction: row;
 }
 
+.mobileProject{
+    left: -35vw;
+    min-width: 70vw;
+    flex-direction: column;
+}
+
 .projectInfo{
-    width: 30%;
     background-color: white;
     align-self: stretch;
     -webkit-box-shadow: 0px 0px 20px 5px rgba(66, 68, 90, 1);
@@ -87,7 +96,8 @@
 
 
 .photo{
-    height: 80%;
+    max-height: 35vh;
+    max-width: 90%;
     -webkit-box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 1);
     -moz-box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 1);

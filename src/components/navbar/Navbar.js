@@ -1,35 +1,23 @@
-import { React, useState } from 'react'
+import React from 'react'
 import styles from './styles.module.css'
-import { ReactComponent as LogoLinkedIn } from '../../assets/media-logos/logo-linkedin.svg'
-import { ReactComponent as LogoGithub } from '../../assets/media-logos/logo-github.svg'
+import { default as LogoLinkedIn } from '../../assets/media-logos/logo-linkedin.svg'
+import { default as LogoGithub } from '../../assets/media-logos/logo-github.svg'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
-    const [linkedInFill, setLinkedFill] = useState("white");
-    const [githubFill, setGithubFill] = useState("white");
-
     let linksNames = [
         "<dev>",
         "<projects>",
         "<contact>"
     ]
+        
   return (
       <div className={styles.navbar}>
               <a href="https://www.linkedin.com/in/tomasz-sawarzyński-890a80241">
-                <LogoLinkedIn className={styles.logo} fill={linkedInFill} onMouseEnter={() => { 
-                    setLinkedFill("rgb(160, 78, 255)");
-                }}
-                onMouseLeave={() => { 
-                    setLinkedFill("white");
-                      }} />
+                <img src={LogoLinkedIn} width="30px" height="30px" className={styles.logo}/>
               </a>
               <a href="https://github.com/Sawarz">
-                <LogoGithub className={styles.logo} fill={githubFill} onMouseEnter={() => { 
-                    setGithubFill("rgb(160, 78, 255)");
-                }}
-                onMouseLeave={() => { 
-                    setGithubFill("white");
-                }}/>
+                <img src={LogoGithub} width="30px" height="30px" className={styles.logo}/>
               </a>
           {linksNames.map((name) => {
               let destination = name.replace(/[<>]/g, "");

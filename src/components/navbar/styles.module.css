@@ -5,7 +5,73 @@
     justify-content: flex-end;
     margin-right: 10%;
     gap: 20px;
+    padding-top: 10px;
 }
+
+.menuItems {
+    width: 100%;
+    transform: translateY(-300%);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    gap: 20px;
+  }
+
+.navbarMobile{
+    margin-left: 35vw;
+}
+
+.hamburgerLines {
+    display: block;
+    cursor: pointer;
+    height: 30px;
+    width: 40px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(160, 78, 255);
+}
+
+.line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.line2 {
+    transition: transform 0.2s ease-in-out;
+}
+  
+.line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.line1Animation{
+    transform: rotate(45deg);
+}
+
+.line2Animation{
+    transform: scaleY(0);
+}
+
+.line3Animation{
+    transform: rotate(-45deg);
+}
+
+.menuItemsAnimation{
+    transform: translateY(0);
+}
+
+
 
 .link{
     text-decoration: none;
@@ -22,6 +88,11 @@
 .logo{
     max-height: 30px;
     max-width: 30px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(124deg) brightness(116%) contrast(116%);
+}
+
+.logo:hover{
+    filter: invert(43%) sepia(96%) saturate(3119%) hue-rotate(243deg) brightness(95%) contrast(113%);
 }
 
 

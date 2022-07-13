@@ -1,11 +1,18 @@
-.currentRoute{
+.currentRoute, .mobileCurrentRoute{
     position: absolute;
-    top: 30px;
+    top: 5vh;
     left: 10%;
-    font-size: 2rem;
     color: rgb(160, 78, 255);
+}
+
+.currentRoute{
+    font-size: 2rem;
 }
 
 .contentWrapper{
     padding: 10vh 15vw 0 15vw;
+}
+
+.mobileCurrentRoute{
+    font-size: 1.4rem;
 }

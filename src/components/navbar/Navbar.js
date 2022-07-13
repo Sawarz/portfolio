@@ -10,13 +10,14 @@ export default function Navbar() {
         "<projects>",
         "<contact>"
     ]
+        
   return (
       <div className={styles.navbar}>
               <a href="https://www.linkedin.com/in/tomasz-sawarzyński-890a80241">
-              <img src={LogoLinkedIn} width="30px" height="30px" className={styles.logo}/>
+                <img src={LogoLinkedIn} width="30px" height="30px" className={styles.logo}/>
               </a>
               <a href="https://github.com/Sawarz">
-              <img src={LogoGithub} width="30px" height="30px" className={styles.logo}/>
+                <img src={LogoGithub} width="30px" height="30px" className={styles.logo}/>
               </a>
           {linksNames.map((name) => {
               let destination = name.replace(/[<>]/g, "");

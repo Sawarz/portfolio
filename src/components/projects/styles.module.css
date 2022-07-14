@@ -32,6 +32,7 @@
     left: -35vw;
     min-width: 70vw;
     flex-direction: column;
+    transform: translateX(-10%);
 }
 
 .projectInfo{

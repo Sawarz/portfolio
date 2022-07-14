@@ -13,6 +13,12 @@ export default function Contact(props) {
 
   function sendEmail(values){
     emailjs.send("service_pyw6dc9", "template_4gck72v", values, process.env.REACT_APP_EMAILJS_KEY)
+    .then((res)=>{
+      if(res.status === 200)
+        alert("Message sent!")
+      else
+        alert("There was a problem sending the message!")
+    })
   }
 
 	return (

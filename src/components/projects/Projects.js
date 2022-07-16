@@ -60,7 +60,7 @@ export default function Projects() {
               </a>
             </div>
             <div className={styles.divider}></div>
-            <div className={styles.description}>Fully working planning website, similar to Google Calendar</div>
+            <div className={styles.description}>A shop mockup website where you can buy all things related to React libraries</div>
             <div className={styles.divider}></div>
             <div className={styles.learnedList}>
               <div className={styles.projectSubtitle}>Used:</div>

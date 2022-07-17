@@ -50,7 +50,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className={styles.project}>
+        <div className={isMobile ? styles.mobileProject : styles.project}>
           <img src={ReactShop} className={styles.photo}></img>
           <div className={styles.projectInfo}>
             <div className={styles.projectTitle} style={{ backgroundColor: "#74c0ff" }}>

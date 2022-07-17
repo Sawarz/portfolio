@@ -1,18 +1,29 @@
-import React from 'react';
+import { React, useState } from 'react';
 import styles from './styles.module.css';
 import { Formik } from 'formik';
 import emailjs from '@emailjs/browser';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Contact(props) {
 
+  const isMobile = useMediaQuery({ maxWidth: 800 });
+  const shortenMail = useMediaQuery({ maxWidth: 1500 });
+
+  const [hiddenEmail, setHiddenEmail] = useState(null)
+
   function sendEmail(values){
     emailjs.send("service_pyw6dc9", "template_4gck72v", values, process.env.REACT_APP_EMAILJS_KEY)
-      .then(res => console.log(res))
+    .then((res)=>{
+      if(res.status === 200)
+        alert("Message sent!")
+      else
+        alert("There was a problem sending the message!")
+    })
   }
 
 	return (
-		<div className={styles.contact}>
-      <div className={styles.leftSide}>
+		<div className={isMobile ? styles.mobileContact : styles.contact}>
+      <div className={isMobile ? styles.mobileLeftSide : styles.leftSide}>
         <div className={styles.title}>Contact me</div>
         <Formik
           initialValues={{
@@ -89,9 +100,18 @@ export default function Contact(props) {
             </form>)}
         </Formik>
       </div>
-			<div className={styles.rightSide}>
+			<div className={isMobile ? styles.mobileRightSide : styles.rightSide}>
         <div className={styles.infoTitle}>Contact info: </div>
-        <div className={styles.info}>tomasz.sawarzynski@gmail.com</div>
+        {shortenMail ? <><button className={styles.emailButton} onClick={()=>{
+          if(hiddenEmail == null)
+            setHiddenEmail(<div className={styles.hiddenEmail}>tomasz.sawarzynski@gmail.com</div>)
+          else
+            setHiddenEmail(null);
+        }}>
+          Show Email
+        </button> 
+        {hiddenEmail}</>
+        : <div className={styles.info}>tomasz.sawarzynski@gmail.com</div>}
         <a href="https://www.linkedin.com/in/tomasz-sawarzyński-890a80241" className={styles.info}>LinkedIn</a>
         <a href="https://github.com/Sawarz" className={styles.info}>Github</a>
       </div>

@@ -95,7 +95,7 @@ export default function Roadmap() {
       <div className={styles.roadmapLine}>
         <div className={styles.roadmapPoint}>
           <div className={roadmapContentStyles}>
-            <AnimatedText>Tomasz Sawarzyński - Aspiring Frontend Developer</AnimatedText>
+            <AnimatedText>Tomasz Sawarzyński - Frontend Developer</AnimatedText>
             <AnimatedContent className={styles.animatedContent}>👨‍💻</AnimatedContent>
           </div>
         </div>
@@ -117,16 +117,23 @@ export default function Roadmap() {
           <div className={roadmapContentStyles}>
             <AnimatedText>Resulting in...</AnimatedText>
             <AnimatedContent className={styles.animatedContent}>🤹</AnimatedContent>
-            <AnimatedContent className={styles.animatedContentText}>June 2021 - Attempts to learn JS, React</AnimatedContent>
+            <AnimatedContent className={styles.animatedContentText}>June 2021 - Learning JS, React</AnimatedContent>
+          </div>
+        </div>
+        <div className={styles.roadmapPoint}>
+          <div className={roadmapContentStyles}>
+            <AnimatedText>Recent times...</AnimatedText>
+            <AnimatedContent className={styles.animatedContent}>🏅</AnimatedContent>
+            <AnimatedContent className={styles.animatedContentText}>August 2022 - Finishing projects and applying for a job!</AnimatedContent> 
           </div>
         </div>
         <div className={styles.roadmapPoint}>
         <div className={styles.confettiSource}></div>
         <AnimatedContent className={styles.confetti}><Confetti width={confettiWidth}></Confetti></AnimatedContent>
           <div className={roadmapContentStyles}>
-            <AnimatedText>Recent times...</AnimatedText>
-            <AnimatedContent className={styles.animatedContent}>🏅</AnimatedContent>
-            <AnimatedContent className={styles.animatedContentText}>2022 - Finishing projects and applying for a job!</AnimatedContent> 
+            <AnimatedText>Today</AnimatedText>
+            <AnimatedContent className={styles.animatedContent}>🤵</AnimatedContent>
+            <AnimatedContent className={styles.animatedContentText}>September 2022 - now: Working as a React Developer at Scandiweb</AnimatedContent>
           </div>
         </div>
         <div className={styles.roadmapEnd}></div>
